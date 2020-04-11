@@ -118,8 +118,8 @@ text-align: center;
 background: #fff;
 position: relative;
 background: #ddd url(../images/enrico_foto_01.png) no-repeat center;
-background-size: cover;
-/* background-position: bottom;*/
+background-size: 100;
+background-position: bottom;
 	
 }
 
