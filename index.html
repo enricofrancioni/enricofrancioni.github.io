@@ -58,6 +58,211 @@
 
                     <h1><font color="red" size = "7">enrico francioni</font></h1>
 <p><font color="black" size = "4">composer, double bass player and teacher</font></p>
+
+<br>
+
+<!-- INIZIO CODICE FINESTRA MODALE -->
+
+<style>
+h1.pr1,
+h2.pr1 {
+    font-weight: 300;
+    margin: 0 0 1rem 0;
+}
+a.pr1 {
+    text-decoration: none;
+    color: #72dea0;
+}
+a.pr1:hover {color: #82eaae}
+header.pr1 {
+    padding: 7vh 10vw;
+    background: #ffebee;
+}
+header.pr1 h1 {
+    color: rgba(0,0,0,0.54);
+}
+.info.pr1 {
+    background: #009688;
+    padding: 3vh 10vw;
+    color: #d9d9d9;
+}
+/* contenitore base, lo sfondo oscurante*/
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 999;
+    -webkit-animation: fade .6s;
+    -moz-animation: fade .6s;
+    animation: fade .6s;
+    overflow: auto;
+}
+/* finestra modale */
+.popup.pr1 {
+    top: 45%;
+    left: 0;
+    right: 0;
+    font-size: 14px;
+    margin: auto;
+    width: 85%;
+    min-width: 320px;
+    max-width: 600px;
+    position: absolute;
+    padding: 15px 20px;
+    border: 1px solid #383838;
+    background: #fefefe;
+    z-index: 1000;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    font: 14px/18px 'Tahoma', Arial, sans-serif;
+    -webkit-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -moz-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -ms-box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    box-shadow: 0 15px 20px rgba(0,0,0,.22),0 19px 60px rgba(0,0,0,.3);
+    -webkit-animation: fade .6s;
+    -moz-animation: fade .6s;
+    animation: fade .6s;
+}
+/* Titolo nella finestra modale  */
+.popup.pr1 h2, .popup.pr1 h3 {
+    margin: 0 0 1rem 0;
+    font-weight: 300;
+    line-height: 1.3;
+    color: #009032;
+    text-shadow: 1px 2px 4px #ddd;
+}
+/* bottone della chiusura */
+.close {
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    border: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    background-color: rgba(0, 131, 119, 0.9);
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    outline: none;
+
+}
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    font-family:  Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    text-decoration: none;
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+/* bottone allo stato hover  */
+.close:hover {
+    background-color: rgba(252, 20, 0, 0.8);
+}
+/* immagini nella finestra modale */
+.popup.pr1 img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+/* miniature di immagini */
+.pl-left,
+.pl-right {
+    width: 25%;
+    height: auto;
+}
+/* miniatura sulla destra */
+.pl-right {
+    float: right;
+    margin: 5px 0 5px 15px;
+}
+/* miniatura sulla sinistra */
+.pl-left {
+    float: left;
+    margin: 5px 18px 5px 0;
+}
+/* animazione alla apparizione del blocco con contenuto  */
+@-moz-keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1 }
+}
+@-webkit-keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1 }
+}
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1 }
+}
+</style>
+    
+       <!-- <header class="pr1">
+            <h1 style="text-align: center;">Finestra pop-up che appare qualche secondo in ritardo rispetto il caricamento della pagina </h1>
+        </header>
+        <div class="info pr1" >
+            <h2 style="text-align: center;">La finestra si aprira dopo 5 secondi che la pagina sara completamente caricata sul browser del utente.</h2>
+            <p style="text-align: center;">
+            <a class="back pr1" href="http://ioeweb.it">Scoprire di piu</a>
+            </p>
+            <p style="text-align: center;">
+            creato da : <a class="back" href="https://www.facebook.com/ioeweb?ref_type=bookmark"> ioeweb.it</a>
+            </p>
+        </div> -->
+        
+        
+        <!-- finestra modale  -->
+        <div id="overlay">
+            <div class="popup pr1">
+                
+<!--                <h2>La finestra modale che creeremo in questa lezione!</h2> -->
+
+<!-- <h3>La finestra appare dopo 5 secondi che la pagina viene completamente caricata !</h3> -->
+<h3>news</h3>
+                <p>
+<!--                <!--    La largezza della finestra e impostata in precentuale rispetto del conetnitore genitore, e nel nostro esempio è lo sfondo che oscura la pagina del sito -->
+                    
+                    <h3>Interceptions</h3>
+<p><i>October 15, 2020 - duration 03':40"</i></p>
+<p>for amplified flute and bass clarinet with sounds support</p>
+
+<p>work composed for the Call for scores 2020 and selected by Italian Society of Contemporary Music (SIMC) for the performance of the Bertolini / Di Felice Duo </p>
+                 </p>
+<!--                 <div class="pl-left">
+                       <img src="images/corsi_a_pagamento_/MomentiTex/img/box_corso_T.png">
+                 </div>
+                 <p>E previsto utilizzo di miniature incorporati, che posiamo inserire sia sulla destar sia sulla sinistra e sono piazzati in un div con le classi  .pl-left e .pl-right rispetivamente.</p>
+                 <div class="pl-right">
+                       <img src="images/corsi_a_pagamento_/MomentiTex/img/box_corso_T.png">
+                 </div>
+        <p>La grandezza del blocco con miniature e sempre fissata in percentuale (25%), mantenendo in tal modo le proporzioni con cambio della grandezza dello schermo del dispositivo usato dal visitatore.</p>
+               <p>
+                   Una semplice animazione di apparizione è realizzata atraverso cambiamento della proprieta di trasparenza (opacity) da 0 a 1
+               </p> -->
+                <button class="close" title="Chiudere" onclick="document.getElementById('overlay').style.display='none';"></button>
+            </div>
+        </div>
+<script type="text/javascript">
+    var delay_popup = 3000;    setTimeout("document.getElementById('overlay').style.display='block'", delay_popup);
+</script>
+   
+<!-- FINE CODICE FINESTRA MODALE -->
+
+
                 </div>
             </div>
         </div>
@@ -76,7 +281,8 @@
                     <a  href=pdf/enrico_test.pdf>TEST PDF PER ENRICO</a>
                     </p>
                     -->
-                    
+
+
                     <p>
 		    <b>Enrico Francioni</b> is a composer, performer and teacher. 
 		    <br>As a composer he is active mainly in the electro-acoustic and chamber instrumental music, while as a double bass performer he is particularly attracted to the production of historical and contemporary twentieth century.
@@ -171,7 +377,6 @@ width=5&link=/https://enricofrancioni.github.io/index.html">
 <B>VISITATORI DAL 01-11-2019</B> 
 -->
 
-	
 </body>
 
 </html>
